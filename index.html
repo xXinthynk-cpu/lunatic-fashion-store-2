@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunatic Fashion Store</title>
+
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f0f1a;
+    color:white;
+}
+
+header {
+    background:linear-gradient(90deg,#1f1f3a,#121224);
+    padding:20px;
+    text-align:center;
+}
+
+header h1 {
+    margin:0;
+    font-size:32px;
+    letter-spacing:2px;
+}
+
+nav a {
+    color:#00f7ff;
+    margin:0 15px;
+    text-decoration:none;
+}
+
+section {
+    padding:40px 10%;
+}
+
+h2 {
+    border-left:4px solid #00f7ff;
+    padding-left:10px;
+}
+
+.product {
+    background:#1a1a2e;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,247,255,0.2);
+}
+
+.product img {
+    width:250px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.product img:hover {
+    transform:scale(1.05);
+}
+
+.price-box {
+    background:#111;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+footer {
+    background:#121224;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* Popup Image */
+#popup {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+#popup img {
+    max-width:90%;
+    max-height:90%;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1 contenteditable="true">Lunatic Fashion Store</h1>
+<p>Futuristic Modest Wear & Kids Collection</p>
+<nav>
+<a href="#unggulan">Produk Unggulan</a>
+<a href="#katalog">Katalog</a>
+<a href="#tentang">Tentang Kami</a>
+</nav>
+<p>
+IG: @lunaticfashion | 
+Tiktok: @lunaticstore | 
+WA: 0812xxxxxxx | 
+FB: Lunatic Fashion
+</p>
+</header>
+
+<!-- PRODUK UNGGULAN -->
+<section id="unggulan">
+<h2>Produk Unggulan & Best Seller</h2>
+
+<div class="product">
+<img src="assets/images/produk-unggulan.jpg" onclick="openPopup(this.src)">
+<h3>Produk Unggulan - Gamis Premium Aurora</h3>
+<p>Gamis dengan desain futuristik, material satin silk premium, detail bordir elegan dan jahitan presisi tinggi.</p>
+
+<div class="price-box">
+<p><b>Basic:</b> Katun Premium - Rp 249.000</p>
+<p><b>Pro:</b> Satin Silk - Rp 349.000</p>
+<p><b>Luxury:</b> Silk Bordir Handmade - Rp 499.000</p>
+</div>
+</div>
+
+</section>
+
+<!-- KATALOG -->
+<section id="katalog">
+<h2>Katalog Produk</h2>
+
+<div class="product">
+<img src="assets/images/gamis-couple.jpg" onclick="openPopup(this.src)">
+<h3>1. Gamis Couple</h3>
+<p>Set pasangan dengan warna serasi, bahan adem dan nyaman untuk acara formal maupun casual.</p>
+</div>
+
+<div class="product">
+<img src="assets/images/gamis-aurora.jpg" onclick="openPopup(this.src)">
+<h3>2. Gamis Aurora</h3>
+<p>Desain modern minimalis, cocok untuk pesta, pengajian, dan acara keluarga.</p>
+</div>
+
+<div class="product">
+<img src="assets/images/celana-anak.jpg" onclick="openPopup(this.src)">
+<h3>3. Celana Skena Anak (7–12 Tahun)</h3>
+<p>Model trendy kekinian, bahan stretch premium, nyaman dipakai bermain maupun jalan-jalan.</p>
+</div>
+
+<div class="product">
+<img src="assets/images/gamis-couple-anak.jpg" onclick="openPopup(this.src)">
+<h3>4. Gamis Couple + Anak</h3>
+<p>Family set edition, cocok untuk momen spesial dan hari raya.</p>
+</div>
+
+</section>
+
+<!-- PROMO -->
+<section>
+<h2>Promo Spesial</h2>
+<p>🔥 Diskon 20% untuk pembelian 2 produk</p>
+<p>🔥 Gratis ongkir area tertentu</p>
+<p>🔥 Bonus hijab untuk pembelian gamis luxury</p>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+<h2>Tentang Lunatic Fashion Store</h2>
+<p>
+Lunatic Fashion Store adalah brand fashion modern dengan sentuhan futuristik.
+Kami mengutamakan kualitas material, detail pengerjaan presisi, serta desain yang elegan dan berkelas.
+</p>
+
+<p><b>Alamat:</b> Jl. raya wonopringgo-pekalongan</p>
+</section>
+
+<footer>
+© 2026 Lunatic Fashion Store | All Rights Reserved
+<br>
+Alamat: Jl. Fashion Raya No. 123, Indonesia
+</footer>
+
+<!-- POPUP IMAGE -->
+<div id="popup" onclick="closePopup()">
+<img id="popup-img">
+</div>
+
+<script>
+function openPopup(src){
+    document.getElementById("popup-img").src = src;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
